@@ -1,0 +1,116 @@
+.pro-heading {
+    font-weight: 900;
+    font-size: 30px;
+    color: #6f1bd0;
+}
+
+.para-box {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.pro-para {
+    color: #7f7f80;
+}
+
+.createIcon{
+    font-size: 20px;
+    padding-right: 2px;
+}
+
+.create-btn {
+    position: relative;
+    margin-top: -50px;
+    margin-left: 700px;
+    padding: 0.8em 1em;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to bottom right, #701bd1, #5465e8);
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.create-btn:hover {
+    animation: sh0 0.5s ease-in-out both;
+}
+
+@keyframes sh0 {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(7deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-7deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+.create-btn:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+.create-btn::before,
+.create-btn::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+.create-btn:hover::before,
+.create-btn:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.create-btn:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+.create-btn:hover::after {
+    transform: translate(50%, 0) scale(1.1);
+}
+
+@media only screen and (max-width: 600px){
+    .create-btn {
+        display:flex;
+        justify-content: start;
+        margin-top: 20px;
+        margin-left: 0;
+        padding: 0.8em 1em;
+    }
+/*     .btnPos{
+        margin-left: -900px;
+    } */
+}

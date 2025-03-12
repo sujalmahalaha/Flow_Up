@@ -1,0 +1,38 @@
+a {
+    text-decoration: none;
+}
+
+h5 {
+    color: #5465e8;
+    margin-bottom: 20px;
+}
+
+/* .card{
+    background: linear-gradient(167deg, #ffffff 70%, #5465e8 150%);
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+} */
+
+.card:after {
+    content: "";
+    height: 70px;
+    width: 1px;
+    position: absolute;
+    left: -1px;
+    top: 65%;
+    transition: top, opacity;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+    background: linear-gradient(transparent, mediumslateblue, transparent);
+    box-shadow: 0 0 30px mediumslateblue;
+    opacity: 0;
+}
+
+.card:after {
+    top: 65%;
+    opacity: 0;
+}
+
+.card:hover:after {
+    top: 25%;
+    opacity: 1;
+}

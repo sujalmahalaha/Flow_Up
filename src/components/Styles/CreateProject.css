@@ -1,0 +1,133 @@
+.cp-heading {
+    text-align: center;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgb(111, 27, 208);
+}
+
+.pro-heading1{
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #6f1bd0;
+}
+
+
+.card{
+    border:none;
+}
+
+.border{
+    --bs-border-color:#dbbbff7e;
+}
+
+
+.inputcp-container {
+    position: relative;
+    margin: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.inputcp[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a8b3fd24;
+    color: #333;
+    width: 200px;
+    outline: none;
+}
+
+.inputcp[type="text"]:focus {
+    width: 100%;
+}
+
+@keyframes floating-label {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+}
+
+.inputcp[type="text"]:placeholder-shown+.label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #777777;
+    pointer-events: none;
+    transition: transform 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.inputcp[type="text"]:focus:not(:placeholder-shown)+.label {
+    transform: translateY(-25px);
+    font-size: 12px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    animation: floating-label 0.3s forwards;
+}
+
+.iconCreate{
+    font-size: 25px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
+
+.createbtn {
+    --color: #6f1bd0;
+    width: 8em;
+    height: 2.6em;
+    margin: 20px 450px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.createbtn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.createbtn:hover {
+    color: #fff;
+}
+
+.createbtn:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.createbtn:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.createbtn:active:before {
+    background: #6f1bd0;
+    transition: background 0s;
+}

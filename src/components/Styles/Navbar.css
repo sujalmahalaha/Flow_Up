@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-color: #a8b3fd24;
+}
+
+.iconNav{
+    color: white;
+    font-size: 20px;
+    margin-right: 2px;
+    margin-top: -6px;
+}
+.iconNav2{
+    font-size: 20px;
+    padding-right: 2px;
+}
+
+.navbar {
+    background: linear-gradient(to bottom right, #701bd1, #5465e8);
+    display: block;
+}
+
+.nav-comp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-link,
+.nav-link:focus {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    margin-right: -50px;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: 0.3rem solid transparent;
+    border-radius: 1rem;
+}
+
+.nav-link:hover{
+    color: white;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: white;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+    color: white;
+}
+
+.nav-item {
+    padding: 0 30px 0 30px;
+}
+
+.btn:hover {
+    color: #701bd1;
+    background-color: white;
+
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 1.5rem;
+}
+
+.btn-nav {
+    border-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-nav:hover {
+    background-color: #ffffff;
+}
+
+.nav-uname {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 4px 12px;
+    margin:0 5px 0px 0;
+    color: #fff;
+    border: 0.1rem solid ;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-comp {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-link,
+    .btn-nav {
+      margin: 5px 0;
+    }
+  
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-item {
+      padding: 5px 0;
+    }
+  
+    .btn {
+      margin-right: 0;
+    }
+  
+    .nav-uname {
+      margin: 5px 0;
+    }
+  
+    .navbar-brand {
+      margin: 10px 0;
+    }
+  }
